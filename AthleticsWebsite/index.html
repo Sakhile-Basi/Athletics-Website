@@ -3,87 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../AthleticsWebsite/CSS/Image slider.css">
+    <link rel="stylesheet" href="../AthleticsWebsite/CSS/style.css">
     <title>Home Page</title>
-    <style>
-		
-        .paris {
-            float: left;
-            position: absolute;
-            left: 0;
-            top: 0;
-            height: 141px;
-            width: 151px;
-        }
-		
-   body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    margin: 0;
-    padding: 0;
-   background-image: url("Images/RSA\ pic.svg") !important;
-    background-size: cover; /* Ensures the image covers the entire background */
-    background-position: center; /* Centers the background image */
-}
-
-
-        header {
-            background-color: rgb(218, 198, 171);
-            color: green;
-            text-align: center;
-            padding: 1em;
-            position: relative;
-        }
-
-        nav {
-            background-color: burlywood;
-            text-align: center;
-            padding: 0.5em;
-        }
-
-        nav a {
-            text-decoration: none; /* Changed to none */
-            color: white;
-            padding: 0.5em;
-            margin: 0 1em;
-            border-radius: 5px;
-            background-color: green;
-        }
-
-        nav a:hover {
-            background-color: cornflowerblue;
-            color: aliceblue;
-        }
-
-        section {
-            padding: 2em;
-            background-color: ghostwhite;
-        }
-
-        footer {
-            background-color: rgb(218, 198, 171);
-            color: green;
-            text-align: center;
-            padding: 1em;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-
-        
-    </style>
 </head>
 <body>
-    <header>
-        <h1>Team SA</h1>
-        <img src="../AthleticsWebsite/Images/paris 2024.jpg" alt="Paris 2024 Logo" class="paris">
-    </header>  
+    <header class="site-header">
 
-    <nav>
-        <a href="index.html">Home Page</a>
-        <a href="../AthleticsWebsite/public/About Page.html">About the Athletes</a>
-        <a href="../AthleticsWebsite/public/Contact Page.html">Contact Information</a>
-        <a href="../AthleticsWebsite/public/Voting Page.html">Voting</a>
-    </nav>
+    <div class="nav-container">
+
+        <a href="index.html" class="logo">
+            <img src="../AthleticsWebsite\Images\logo\paris 2024.jpg" alt="Paris 2024">
+            <span>TEAM SA</span>
+        </a>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Open navigation">
+            ☰
+        </button>
+
+        <nav class="main-nav" id="mainNav">
+            <a href="index.html">Home</a>
+            <a href="pages/athletes.html">Athletes</a>
+            <a href="pages/voting.html">Voting</a>
+            <a href="pages/contact.html">Contact</a>
+        </nav>
+
+    </div>
+
+</header>
 
     <section>
         <h2>Welcome to Team SA</h2> 
@@ -95,18 +41,35 @@
         <br>
         <p>Together, we can nurture and empower our exceptional talent, ensuring they receive the support they need to thrive and excel on the international stage.</p>
         <h3 style="text-align: center;">Some Images from the Past Olympic Games</h3>
-        <div class="container">
-    <div class="slider-wrapper">
-        <ul class="Image-list">
-            <li><img class="Image-item" src="../AthleticsWebsite/Images/Steven Gardiner.jpg" alt="Steven Gardiner"></li>
-            <li><img class="Image-item" src="../AthleticsWebsite/Images/Semenya.jpg" alt="Caster Semenya"></li>
-            <li><img class="Image-item" src="../AthleticsWebsite/Images/Elaine Thompson.jpg" alt="Elaine Thompson"></li>
-            <li><img class="Image-item" src="../AthleticsWebsite/Images/Andre.jpg" alt="Andre"></li>
-            <li><img class="Image-item" src="../AthleticsWebsite/Images/Karsten Warholm.jpg" alt="Karsten Warholm"></li>
-            <li><img class="Image-item" src="../AthleticsWebsite/Images/Marcell Jacobs.jpg" alt="Marcell Jacobs"></li>
-        </ul>
+     <section class="carousel-section">
+
+    <h2>Olympic Moments</h2>
+
+    <div class="carousel">
+
+        <button class="carousel-button prev" id="prevButton">
+            &#10094;
+        </button>
+
+        <div class="carousel-content">
+
+        <a id="carouselLink" href="" target="_blank">
+           <img id="carouselImage" src="" alt="">
+         </a>
+
+            <h3 id="carouselTitle"></h3>
+
+        </div>
+
+        <button class="carousel-button next" id="nextButton">
+            &#10095;
+        </button>
+
     </div>
-</div>
+
+    <div class="carousel-dots" id="carouselDots"></div>
+
+</section>
             <h3>Do you want to stand a chance to win an all-expenses-paid trip to the Paris Games?</h3>
             <p>Follow these instructions to enter the competition:</p>
             <ol>
@@ -116,8 +79,11 @@
             </ol>
             <p>The competition ends June 16th, so hurry up!</p>
         </section>
-        <footer>
-            <p>&copy; 2024 Team SA. All rights reserved.</p>
-        </footer>
-    </body>
+           <footer>
+        <p>&copy; 2026 Team SA. All rights reserved.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+
+</body>
 </html>
